@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css'
-import HobbieList from './Components/HobbieList';
+import {fetchData} from './Public/AWSConfig'
 
 function App() {
+  const fetchDataFormDynamoDb = () => {
+    fetchData('user')
+  }
   return (
-    <div>
-      <h1>
-        Hello World
-      </h1>
-      <HobbieList />
-    </div>
+    <>
+      Hello World
+      <button onClick={() => fetchDataFormDynamoDb()}> Fetch </button>
+    </>
   );
 }
 
