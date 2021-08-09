@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 // STARTS HERE
+import * as AWS from 'aws-sdk'
 import {ConfigurationOptions} from 'aws-sdk';
 
 const configuration: ConfigurationOptions = {
