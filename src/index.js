@@ -7,7 +7,7 @@ import * as AWS from 'aws-sdk'
 import {ConfigurationOptions} from 'aws-sdk';
 
 const configuration: ConfigurationOptions = {
-  region: 'Ohio',
+  region: 'us-east-1',
   secretAccessKey: 'KMf1SNphL3AfAEwkg45kiV7wA0S9XciZ8iblBRzo',
   accessKeyId: 'AKIAV3IZ7OVN3VYX3UD7'
 }
