@@ -4,7 +4,7 @@ import {fetchData} from './Public/AWSConfig'
 
 function App() {
   const fetchDataFormDynamoDb = () => {
-    fetchData('user')
+    fetchData('userid')
   }
   return (
     <>
