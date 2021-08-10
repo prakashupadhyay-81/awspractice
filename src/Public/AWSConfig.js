@@ -9,7 +9,10 @@ export const fetchData = (tableName) => {
         TableName: tableName
     }
 
-    docClient.scan(params, function (err, data) {
+    docClient.query(params, function (err, data) {
+        if(err){
+            console.log(err)
+        }
         if (!err) {
             console.log(data)
         }
