@@ -11,7 +11,7 @@ export const fetchData = (tableName) => {
         }
     }
 
-    docClient.scan(params, function (err, data) {
+    docClient.get(params, function (err, data) {
         if(err){
             console.log(err)
         }
