@@ -5,25 +5,48 @@ accessKeyId: 'AKIAV3IZ7OVN3VYX3UD7'})
 
 
 export const fetchData = (tableName) => {
-    var params = {
-        TableName: tableName
-    }
-
+    console.log("Processing...");
+           var params = {
+            TableName: tableName
+        }
     const response = {
-        statusCode: 200,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': true,
-        },
-        body: JSON.stringify('Hello from Lambda function'),
-    }
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    },
+    body: JSON.stringify('Hello from Lambda function'),
+  };
 
-    docClient.query(params, function (err, data) {
+    docClient.put(params, function(err, data) {
         if(err){
-            console.log(err)
+            console.log(err);
+        } else {
+            console.log(data);
         }
-        if (!err) {
-            console.log(data)
-        }
-    })
-}
+    });
+};
+
+// export const fetchData = (tableName) => {
+//     var params = {
+//         TableName: tableName
+//     }
+
+//     const response = {
+//         statusCode: 200,
+//         headers: {
+//           'Access-Control-Allow-Origin': '*',
+//           'Access-Control-Allow-Credentials': true,
+//         },
+//         body: JSON.stringify('Hello from Lambda function'),
+//     }
+
+//     docClient.query(params, function (err, data) {
+//         if(err){
+//             console.log(err)
+//         }
+//         if (!err) {
+//             console.log(data)
+//         }
+//     })
+// }
