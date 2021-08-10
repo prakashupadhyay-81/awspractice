@@ -18,7 +18,7 @@ export const fetchData = (tableName) => {
     body: JSON.stringify('Hello from Lambda function'),
   };
 
-    docClient.put(params, function(err, data) {
+    docClient.get(params, response, function(err, data) {
         if(err){
             console.log(err);
         } else {
