@@ -5,7 +5,10 @@ accessKeyId: 'AKIAV3IZ7OVN3VYX3UD7'})
 
 export const fetchData = (tableName) => {
     var params = {
-        TableName: tableName
+        TableName: tableName,
+        key: {
+            'userid':'0001'
+        }
     }
 
     docClient.scan(params, function (err, data) {
