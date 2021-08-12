@@ -5,10 +5,10 @@ accessKeyId: 'AKIAV3IZ7OVN3VYX3UD7'})
 
 export const fetchData = (tableName) => {
     var params = {
-        TableName: tableName,
-        Key: {
-            'userid':'0001'
-        }
+        TableName: tableName
+        // Key: {
+        //     'userid':'0001'
+        // }
     }
 
     docClient.get(params, function (err, data) {
